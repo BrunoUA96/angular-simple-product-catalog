@@ -7,16 +7,20 @@ import {Product} from "../models/product.interface";
 })
 export class ProductsService {
 
-  baseAPI: string = ' http://localhost:3000/products';
+  baseAPI: string = 'http://localhost:3000/products';
 
   constructor(private http: HttpClient) {
   }
 
   getProducts() {
-    return this.http.get<Product[]>(this.baseAPI)
+    return this.http.get<Product[]>(`${this.baseAPI}`)
   }
 
   getProduct(id: number) {
     return this.http.get<Product>(`${this.baseAPI}/${id}`)
+  }
+
+  addProducts(product: Product) {
+    return this.http.post('http://localhost:3000/products', product);
   }
 }

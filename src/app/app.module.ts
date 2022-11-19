@@ -15,7 +15,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {ProductCardComponent} from './components/products/product-card/product-card.component';
 import {MatCardModule} from '@angular/material/card';
 import {HttpClientModule} from "@angular/common/http";
-
+import { ModalNewProductComponent } from './components/products/modal-new-product/modal-new-product.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {HttpClientModule} from "@angular/common/http";
     BasketComponent,
     ProductsComponent,
     ProductComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ModalNewProductComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatIconModule,
     MatButtonModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
