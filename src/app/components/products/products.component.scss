@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  .product-card-box {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
